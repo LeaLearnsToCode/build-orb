@@ -22,7 +22,7 @@ parameters:
     type: string
     default: "dev:alpha"
 
-jobs: 
+#jobs:
   # test-ci-rust:
   #   executor: lealearnstocode/rust
   #   steps:
