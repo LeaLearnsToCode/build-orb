@@ -34,7 +34,7 @@ jobs:
               echo 'channel = "1.56.0"'
               echo 'components = [ "rustfmt", "clippy" ]'
             } >> rust-toolchain.toml
-      - bearcove/with-rust:
+      - lealearnstocode/with-rust:
           steps:
             - run:
                 command: |
