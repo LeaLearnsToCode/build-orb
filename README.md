@@ -1,19 +1,10 @@
-# Orb Project Template
+# build-orb
 
-[![CircleCI](https://circleci.com/gh/LeaLearnsToCode/build-orb/tree/main.svg?style=svg&circle-token=8e644c97c89aa7fcdc51a33f933304d8004d7925)](https://circleci.com/gh/LeaLearnsToCode/build-orb/tree/main)(https://circleci.com/gh/LeaLearnsToCode/build-orb) [![CircleCI Orb Version](https://badges.circleci.com/orbs/lealearnstocode/build-orb.svg&circle-token=8e644c97c89aa7fcdc51a33f933304d8004d7925)](https://circleci.com/orbs/registry/orb/lealearnstocode/build-orb) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/LeaLearnsToCode/build-orb/master/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
+[![CircleCI](https://circleci.com/gh/LeaLearnsToCode/build-orb/tree/main.svg?style=svg)](https://circleci.com/gh/LeaLearnsToCode/build-orb/tree/main)[![CircleCI Orb Version](https://badges.circleci.com/orbs/lealearnstocode/build-orb.svg)](https://circleci.com/orbs/registry/orb/lealearnstocode/build-orb) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/LeaLearnsToCode/build-orb/master/LICENSE)
 
+Provides executors for my build jobs.
 
-
-A starter template for orb projects. Build, test, and publish orbs automatically on CircleCI with [Orb-Tools](https://circleci.com/orbs/registry/orb/circleci/orb-tools).
-
-Additional READMEs are available in each directory.
-
-
-
-## Resources
-
-[CircleCI Orb Registry Page](https://circleci.com/orbs/registry/orb/lealearnstocode/build-orb) - The official registry page of this orb for all versions, executors, commands, and jobs described.
-[CircleCI Orb Docs](https://circleci.com/docs/2.0/orb-intro/#section=configuration) - Docs for using and creating CircleCI Orbs.
+[CircleCI Orb Registry Page](https://circleci.com/orbs/registry/orb/lealearnstocode/build-orb) - The official registry page and documentation for this orb.
 
 ### How to Contribute
 
