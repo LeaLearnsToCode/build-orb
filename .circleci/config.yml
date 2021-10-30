@@ -22,26 +22,26 @@ parameters:
     type: string
     default: "dev:alpha"
 
-#jobs:
-  # test-ci-rust:
-  #   executor: lealearnstocode/rust
-  #   steps:
-  #     - checkout
-  #     - run:
-  #         command: |
-  #           {
-  #             echo '[toolchain]'
-  #             echo 'channel = "1.56.0"'
-  #             echo 'components = [ "rustfmt", "clippy" ]'
-  #           } >> rust-toolchain.toml
-  #     - lealearnstocode/with-rust:
-  #         steps:
-  #           - run:
-  #               command: |
-  #                 cargo --version
-  #                 cargo new hello
-  #                 cd hello
-  #                 cargo run
+jobs:
+  test-ci-rust:
+    executor: lealearnstocode/rust
+    steps:
+      - checkout
+      - run:
+          command: |
+            {
+              echo '[toolchain]'
+              echo 'channel = "1.56.0"'
+              echo 'components = [ "rustfmt", "clippy" ]'
+            } >> rust-toolchain.toml
+      - lealearnstocode/with-rust:
+          steps:
+            - run:
+                command: |
+                  cargo --version
+                  cargo new hello
+                  cd hello
+                  cargo run
 
 workflows:
   # Prior to producing a development orb (which requires credentials) basic validation, linting, and even unit testing can be performed.
@@ -82,7 +82,7 @@ workflows:
     when: << pipeline.parameters.run-integration-tests >>
     jobs:
       # Run any integration tests defined within the `jobs` key.
-      # - test-ci-rust
+      - test-ci-rust
       # Publish a semver version of the orb. relies on
       # the commit subject containing the text "[semver:patch|minor|major|skip]"
       # as that will determine whether a patch, minor or major
@@ -96,7 +96,7 @@ workflows:
           fail-if-semver-not-indicated: true
           publish-version-tag: false
           requires:
-            # - test-ci-rust
+            - test-ci-rust
           filters:
             branches:
               only:
