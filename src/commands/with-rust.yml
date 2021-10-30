@@ -1,0 +1,27 @@
+description: >
+  Sets up caching, cargo authentication, etc.
+
+parameters:
+  steps:
+    type: steps
+    description: Rust compilation steps
+  sscache-bucket:
+    type: string
+    description: Name of the S3 bucket for sscache
+    default: lealearnstocode-sscache
+  sscache-region:
+    type: string
+    description: Region of the S3 bucket for sscache
+    default: us-east-1
+
+steps:
+  - run:
+    name: Start sscache and configure rust
+    environment:
+      SSCACHE_BUCKET: << parameters.sscache-bucket >>
+      SSCACHE_REGION: << parameters.sscache-region >>
+    command: <<include(scripts/with-rust-pre.sh)>>
+  - steps: << parameters.steps >>
+  - run:
+    name: Stop sccache
+    command: <<include(scripts/with-rust-post.sh)>>

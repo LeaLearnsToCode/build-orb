@@ -1,0 +1,4 @@
+decription: >
+  Default Rust Executor
+docker:
+  - image: 014428637873.dkr.ecr.us-east-1.amazonaws.com/ci-rust:latest
