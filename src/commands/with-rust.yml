@@ -16,12 +16,29 @@ parameters:
 
 steps:
   - run:
-    name: Start sscache and configure rust
-    environment:
-      SSCACHE_BUCKET: << parameters.sscache-bucket >>
-      SSCACHE_REGION: << parameters.sscache-region >>
-    command: <<include(scripts/with-rust-pre.sh)>>
+      name: Start sscache and configure rust
+      environment:
+        SSCACHE_BUCKET: << parameters.sscache-bucket >>
+        SSCACHE_REGION: << parameters.sscache-region >>
+      command: <<include(scripts/with-rust-pre.sh)>>
   - steps: << parameters.steps >>
   - run:
-    name: Stop sccache
-    command: <<include(scripts/with-rust-post.sh)>>
+      name: Stop sccache
+      command: <<include(scripts/with-rust-post.sh)>>
+
+
+description: >
+  This command echos "Hello World" using file inclusion.
+# What will this command do?
+# Descriptions should be short, simple, and clear.
+parameters:
+  to:
+    type: string
+    default: "World"
+    description: "Hello to whom?"
+steps:
+  - run:
+      environment:
+        PARAM_TO: <<parameters.to>>
+      name: Hello Greeting
+      command: <<include(scripts/greet.sh)>>
