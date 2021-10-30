@@ -1,13 +1,27 @@
 description: >
-  Sample example description.
+  Example of a Rust build script.
 # Provide a use-case based example for using this orb.
 # Everything in the `usage` section will be displayed in the orb registry.
 # Comments are not retained.
 usage:
   version: 2.1
-  orbs:
-    <orb-name>: <namespace>/<orb-name>@1.2.3
+
   workflows:
-    use-my-orb:
+    version: 2
+    rust:
       jobs:
-        - <orb-name>/<job-name>
+        - build:
+            context: [aws]
+
+  jobs:
+    build:
+      executor: lealearnstocode/rust
+      steps:
+        - checkout
+        - lealearnstocode/with-rust:
+            steps:
+              - run: |
+                  just ci-check
+                  just test
+  orbs:
+    lealearnstocode: lealearnstocode/build-orb@0.2.0

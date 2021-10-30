@@ -1,6 +1,6 @@
 # Orb Project Template
 
-[![CircleCI](https://circleci.com/gh/LeaLearnsToCode/build-orb/tree/main.svg?style=svg&circle-token=8e644c97c89aa7fcdc51a33f933304d8004d7925)](https://circleci.com/gh/LeaLearnsToCode/build-orb/tree/main)(https://circleci.com/gh/LeaLearnsToCode/build-orb) [![CircleCI Orb Version](https://badges.circleci.com/orbs/lealearnstocode/build-orb.svg)](https://circleci.com/orbs/registry/orb/lealearnstocode/build-orb) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/LeaLearnsToCode/build-orb/master/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
+[![CircleCI](https://circleci.com/gh/LeaLearnsToCode/build-orb/tree/main.svg?style=svg&circle-token=8e644c97c89aa7fcdc51a33f933304d8004d7925)](https://circleci.com/gh/LeaLearnsToCode/build-orb/tree/main)(https://circleci.com/gh/LeaLearnsToCode/build-orb) [![CircleCI Orb Version](https://badges.circleci.com/orbs/lealearnstocode/build-orb.svg&circle-token=8e644c97c89aa7fcdc51a33f933304d8004d7925)](https://circleci.com/orbs/registry/orb/lealearnstocode/build-orb) [![GitHub License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/LeaLearnsToCode/build-orb/master/LICENSE) [![CircleCI Community](https://img.shields.io/badge/community-CircleCI%20Discuss-343434.svg)](https://discuss.circleci.com/c/ecosystem/orbs)
 
 
 
