@@ -8,7 +8,7 @@ export SCCACHE_IDLE_TIMEOUT="0"
 export RUST_LOG="sccache=info"
 export SCCACHE_ERROR_LOG=/tmp/sccache.log
 export SCCACHE_LOG="info,sccache::cache=debug"
-export SCCACHE_S3_KEY_PREFIX="ci-rust_"
+export SCCACHE_S3_KEY_PREFIX="ci-rust"
 sccache --start-server
 
 rustflags=(
